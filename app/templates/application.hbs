@@ -1,5 +1,17 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+{{#paper-toolbar}}
+  <div class="md-toolbar-tools">
+    {{#paper-button action=(transition-to 'home')}}{{paper-icon 'home'}}Home{{/paper-button}}
+    {{#link-to 'form'}}{{#paper-button}}Form{{/paper-button}}{{/link-to}}
+    {{#link-to 'dashboard'}}{{#paper-button}}Dash Board{{/paper-button}}{{/link-to}}
+    <div class="paper-right">
+      {{paper-icon 'person'}}
+      {{#if session.currentUser}}
+        {{#paper-button action='logout'}}Logout{{/paper-button}}
+      {{else}}
+        {{#paper-button action=(transition-to 'login')}}Login{{/paper-button}}
+        {{#paper-button action=(transition-to 'register')}}Register{{/paper-button}}
+      {{/if}}
+    </div>
+  </div>
+{{/paper-toolbar}}
 {{outlet}}
