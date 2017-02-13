@@ -27,4 +27,13 @@ export default function() {
       }]
     };
   });
+
+  this.get('/authors', (schema, request) => {
+    return schema.authors.all();
+  });
+
+  this.get('/authors/:id', (schema, request) => {
+  return schema.authors.find(request.params.id);
+});
+
 }
