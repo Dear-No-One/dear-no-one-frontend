@@ -19,6 +19,11 @@ $def-accent2: #F54F29 !important;
   color: $def-primary;
 }
 
+p {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
 .paper-right {
   margin-left: auto;
 }
@@ -86,7 +91,7 @@ $def-accent2: #F54F29 !important;
     padding: 1em 5em;
     line-height: 1.5em;
     text-align: center;
-    ma
+
     .card-icon {
         display: flex;
         justify-content: center;
@@ -116,7 +121,15 @@ $def-accent2: #F54F29 !important;
 .parallax-2-text, .parallax-3-text   {
  padding: 1.5em 5em;
  background: #f54f29;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ p {
+   text-align: center;
+ }
 }
+
 .parallax-3 {
    /* The image used */
    background-image: url("https://static.pexels.com/photos/309166/pexels-photo-309166.jpeg");
@@ -134,4 +147,10 @@ $def-accent2: #F54F29 !important;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+}
+
+.footer {
+  background-color: $def-primary;
+  font-size: 1em;
+  text-align: center;
 }
