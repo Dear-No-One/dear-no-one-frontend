@@ -1,4 +1,23 @@
+$primary: "indigo";
+$accent: "pink";
+$warn: "red";
+$background: "grey";
+$link: "light-blue";
+
 @import 'ember-paper';
+
+$def-primary: #405952 !important;
+$def-secondary: #9C9B7A !important;
+$def-taupey: #FFD393 !important;
+$def-accent1: #FF974F !important;
+$def-accent2: #F54F29 !important;
+
+@mixin button-style {
+  padding: .5em 2em;
+  opacity: .8;
+  background-color: $def-primary;
+  color: $def-taupey;
+}
 
 .paper-right {
   margin-left: auto;
@@ -21,13 +40,34 @@
    background-image: url("https://static.pexels.com/photos/34578/pexels-photo.jpg");
 
    /* Set a specific height */
-   height: 60vh;
+   height: 75vh;
 
    /* Create the parallax scrolling effect */
    background-attachment: fixed;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 5em;
+    margin: 0;
+  }
+
+  .button {
+    @include button-style;
+  }
 }
 
 .test {
