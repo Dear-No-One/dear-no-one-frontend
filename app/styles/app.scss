@@ -20,18 +20,13 @@ $def-accent2: #F54F29 !important;
 }
 @mixin parallax ($url) {
     background-image:url($url);
-    /* Set a specific height */
-
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    //
+
     display: flex;
     flex-direction: column;
-
 }
 
 p {
