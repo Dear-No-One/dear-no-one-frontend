@@ -7,35 +7,9 @@
     </div>
   </div>
 </div>
-<div class="layout-row layout-xs-column blog-container">
-    <div class="flex flex-gt-xs-80">
-        {{#paper-card class="bio-container" as |card|}}
-          {{#card.title as |title|}}
-            <p>Church-key ethical succulents, YOLO affogato next level letterpress
-                8-bit lo-fi ugh jean shorts tousled kickstarter microdosing
-                polaroid. Narwhal hell of butcher cray, woke kickstarter dreamcatcher
-                 mlkshk letterpress celiac tofu edison bulb gastropub church-key
-                  distillery.</p>
-          {{/card.title}}
-          {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
-         {{#actions.icons}}
-           <!-- {{#paper-button iconButton=true}}{{paper-icon 'favorite'}}{{/paper-button}} -->
-           <img src="assets/facebook.png" alt="" class="social-icon">
-           <img src="assets/twitter.png" alt="" class="social-icon">
-           <img src="assets/instagram.png" alt="" class="social-icon">
-         {{/actions.icons}}
-       {{/card.actions}}
-        {{/paper-card}}
-    </div>
 
-    <div class="flex flex-gt-xs-20">
-        {{#paper-card as |card|}}
-            {{card.image size="md" src="https://pbs.twimg.com/profile_images/759389830975455232/4-UdzhN5_400x400.jpg" alt="Tomster" title="Johnny"}}
-        {{/paper-card}}
-    </div>
-</div>
-<div class="layout-row layout-xs-column blog-container">
-  <div class=" flex blog-content">
+<div class="layout-row layout-xs-column blog-container md-padding">
+  <div class=" flex flex-gt-xs-66 blog-content">
     {{#paper-card as |card|}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
@@ -54,6 +28,29 @@
             {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
           {{/card.actions}}
         {{/card.content}}
+      {{/paper-card}}
+  </div>
+  <div class="flex flex-gt-xs-33 blog-sidebar">
+    {{#paper-card as |card|}}
+        {{card.image src="https://pbs.twimg.com/profile_images/874417950/003-2-square_400x400.jpg" alt="Washed Out" title="Washed Out"}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}Sammy G{{/text.headline}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.content}}
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        {{/card.content}}
+        {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
+          {{#actions.icons}}
+            <img src="assets/facebook.png" alt="" class="social-icon">
+            <img src="assets/twitter.png" alt="" class="social-icon">
+            <img src="assets/instagram.png" alt="" class="social-icon">
+          {{/actions.icons}}
+        {{/card.actions}}
       {{/paper-card}}
   </div>
 </div>
