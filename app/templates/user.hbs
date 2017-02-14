@@ -1,0 +1,9 @@
+{{#each model.users as |user|}}
+  <article>
+    <h1>{{user.username}}</h1>
+    <h3>{{user.password}}</h3>
+    <h3>{{user.bio}}</h3>
+  </article>
+{{/each}}
+<h1>{{model.userOne.username}}</h1>
+<h2>{{model.userOne.bio}}</h2>
