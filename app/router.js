@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('blogs');
   this.route('newroute');
   this.route('user');
+  this.route('blog');
 });
 
 export default Router;
