@@ -99,8 +99,22 @@ p {
 
 .template {
     @include parallax("https://images.pexels.com/photos/274060/pexels-photo-274060.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
-    height: 75vh;
+    height: 60vh;
 }
+
+.blog-container {
+
+  .blog-content {
+    background-color: red;
+    border: 1px solid black;
+  }
+
+  .blog-sidebar {
+    background-color: yellow;
+    border: 1px solid black;
+  }
+}
+
 
 .footer {
   background-color: $def-primary;
