@@ -11,6 +11,8 @@ Router.map(function() {
   this.route('dashboard');
   this.route('blogs');
   this.route('newroute');
+  this.route('home');
+  this.route('login');
   this.route('user');
 });
 

@@ -8,7 +8,7 @@
       {{#if session.currentUser}}
         {{#paper-button action='logout'}}Logout{{/paper-button}}
       {{else}}
-        {{#paper-button}}Login{{/paper-button}}
+        {{#link-to 'login'}}{{#paper-button}}Login{{/paper-button}} {{/link-to}}
         {{#paper-button}}Register{{/paper-button}}
       {{/if}}
     </div>
