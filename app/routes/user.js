@@ -13,6 +13,10 @@ export default Ember.Route.extend({
       });
   }
 });
+
+//applicaion is talking to form/model through .query
+//nested routes takes care of passed data without more calls
+
 // import Ember from 'ember';
 //
 // export default Ember.Route.extend({
