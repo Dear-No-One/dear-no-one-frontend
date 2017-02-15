@@ -5,9 +5,16 @@ export default Ember.Component.extend({
     actions: {
         openAnimatedDialog(){
             this.toggleProperty('showAnimatedDialog');
+            console.log(this.showAnimatedDialog);
         },
         closeAnimatedDialog() {
-            this.toggleProperty('showAnimatedDialog');
+            console.log(this.showAnimatedDialog);
+            // this.get('showAnimatedDialog');
+            this.sendAction('showAnimatedDialog');
+
+            console.log(this.showAnimatedDialog);
+
+
         }
     }
 });
