@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
         this.set('showAnimatedDialog', false);
       },
       logForm() {
-        console.log(this.postBody);
+        console.log(this.postTitle, this.postBody);
       }
   }
 });
