@@ -1,5 +1,4 @@
 /* jshint node: true */
-
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'nav-splash',
@@ -16,6 +15,13 @@ module.exports = function(environment) {
         Date: false
       }
     },
+    'ember-simple-auth': {
+      authenticationRoute: 'login',
+      routeAfterAuthentication: 'dashboard',
+      routeIfAlreadyAuthenticated: 'dashboard',
+      baseURL: 'http://localhost:3000',
+    },
+
 
     APP: {
       // Here you can pass flags/options to your application instance
