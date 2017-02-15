@@ -1,2 +1,9 @@
-{{template-1}}
-{{template-2}}
+{{#paper-switch value=booleanProp1 onChange=(action (mut booleanProp1))}}
+   {{booleanProp1}}
+ {{/paper-switch}}
+
+{{#if booleanProp1}}
+  {{template-1}}
+{{else}}
+ {{template-2}}
+{{/if}}
