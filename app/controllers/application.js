@@ -4,9 +4,10 @@ export default Ember.Controller.extend({
   showAnimatedDialog: false,
   actions: {
       openAnimatedDialog(){
-          this.toggleProperty('showAnimatedDialog');
+        this.set('showAnimatedDialog', true);
       },
       closeAnimatedDialog() {
+        console.log(this.showAnimatedDialog);
           this.set('showAnimatedDialog', false);
       }
   }

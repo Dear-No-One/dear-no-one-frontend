@@ -13,7 +13,8 @@
       {{#paper-button}}Blog{{/paper-button}}
     {{/link-to}}
     <div class="paper-right">
-        {{#link-to 'new-blog-form'}}{{#paper-button id="dialog-button"}}Create Blog{{/paper-button}}{{/link-to}}
+      <a {{action 'openAnimatedDialog'}}>{{#paper-button id="dialog-start"}}Create Blog{{/paper-button}}</a>
+
       {{paper-icon 'person'}}
       {{#if session.currentUser}}
         {{#paper-button action='logout' }}Logout{{/paper-button}}
@@ -29,13 +30,13 @@
 
 {{outlet}}
 
-{{#paper-toolbar class="footer" }}
+{{#paper-toolbar class="footer" id="dialog-end"}}
   <p>&copy; Amanda & Friends</p>
 {{/paper-toolbar}}
 
 
 {{#if showAnimatedDialog}}
-  {{#paper-dialog fullscreen=fullscreen onClose=(action "closeAnimatedDialog") openFrom="#dialog-button" closeTo="#bottom-of-card" }}
+  {{#paper-dialog fullscreen=fullscreen onClose=(action "closeAnimatedDialog") openFrom="#dialog-start" closeTo="#dialog-end" }}
 
     {{#paper-dialog-content}}
       <h2 class="md-title">This dialog is animated!</h2>
@@ -44,8 +45,8 @@
 
     {{#paper-dialog-actions class="layout-row" }}
       <span class="flex"></span>
-      <!-- <a {{action 'closeAnimatedDialog'}}>{{#paper-button}}Close{{/paper-button}}</a> -->
-      {{#paper-button primary=true onClick=(action "closeAnimatedDialog")}}Okay!{{/paper-button}}
+      {{#paper-button onClick=(action 'closeAnimatedDialog')}}Close{{/paper-button}}
+      {{#paper-button primary=true}}Okay!{{/paper-button}}
     {{/paper-dialog-actions}}
 
   {{/paper-dialog}}
