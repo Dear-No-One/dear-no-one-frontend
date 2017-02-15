@@ -1,4 +1,4 @@
-{{#paper-form as |form|}}
+{{#paper-form onSubmit=(action "logForm") as |form|}}
   <div class="layout-row">
     <div class="layout-column flex-100">
       {{form.input label="Post Title" value=firstName onChange=(action (mut firstName)) required=true}}

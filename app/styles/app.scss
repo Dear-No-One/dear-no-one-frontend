@@ -134,6 +134,11 @@ p {
     overflow: hidden;
     overflow: scroll;
 }
+
+.blog-post-dialog {
+  width: 80vw;
+}
+
 .footer {
   background-color: $def-primary;
   font-size: 1em;
