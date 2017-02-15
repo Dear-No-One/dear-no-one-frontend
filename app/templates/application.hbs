@@ -36,11 +36,23 @@
 
 
 {{#if showAnimatedDialog}}
-  {{#paper-dialog fullscreen=fullscreen onClose=(action "closeAnimatedDialog") openFrom="#dialog-start" closeTo="#dialog-end" }}
+  {{#paper-dialog class="blog-post-dialog" fullscreen=fullscreen onClose=(action "closeAnimatedDialog") openFrom="#dialog-start" closeTo="#dialog-end" }}
 
     {{#paper-dialog-content}}
-      <h2 class="md-title">This dialog is animated!</h2>
-      <p>It opened from above, but it will close to below.</p>
+      <h2 class="md-title">Create a New Blog Post!</h2>
+      {{#paper-form onSubmit=(action "logForm") as |form|}}
+        <div class="layout-row">
+          <div class="layout-column flex-100">
+            {{form.input label="Post Title" value=firstName onChange=(action (mut firstName)) required=true}}
+            {{form.input label="Post Image" value=lastName onChange=(action (mut lastName))}}
+            {{form.input label="Post Body" value=postBody onChange=(action (mut postBody)) textarea=true block=true required=true passThru=(hash rows=5 maxRows=5)}}
+          </div>
+        </div>
+        <div class="layout-row">
+          {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
+        </div>
+      {{/paper-form}}
+
     {{/paper-dialog-content}}
 
     {{#paper-dialog-actions class="layout-row" }}

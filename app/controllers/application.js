@@ -7,8 +7,10 @@ export default Ember.Controller.extend({
         this.set('showAnimatedDialog', true);
       },
       closeAnimatedDialog() {
-        console.log(this.showAnimatedDialog);
-          this.set('showAnimatedDialog', false);
+        this.set('showAnimatedDialog', false);
+      },
+      logForm() {
+        console.log(this.postBody);
       }
   }
 });
