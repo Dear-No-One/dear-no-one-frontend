@@ -1,0 +1,47 @@
+{{#paper-toolbar class="navbar" }}
+  <div class="md-toolbar-tools">
+    {{#link-to 'index'}}{{paper-icon 'home'}}
+      {{#paper-button}}Home{{/paper-button}}
+    {{/link-to}}
+    {{#link-to 'form'}}
+      {{#paper-button}}Form{{/paper-button}}
+    {{/link-to}}
+    {{#link-to 'dashboard'}}
+      {{#paper-button}}Dash Board{{/paper-button}}
+    {{/link-to}}
+    {{#link-to 'blog'}}
+      {{#paper-button}}Blog{{/paper-button}}
+    {{/link-to}}
+    <div class="paper-right">
+        <a {{action 'openAnimatedDialog'}}>{{#paper-button id="dialog-button"}}Create Blog{{/paper-button}}</a>
+      {{paper-icon 'person'}}
+      {{#if session.currentUser}}
+        {{#paper-button action='logout' }}Logout{{/paper-button}}
+      {{else}}
+        {{#link-to 'login'}}
+          {{#paper-button}}Login{{/paper-button}}
+        {{/link-to}}
+        {{#paper-button}}Register{{/paper-button}}
+      {{/if}}
+    </div>
+  </div>
+{{/paper-toolbar}}
+{{#if showAnimatedDialog}}
+  {{#paper-dialog fullscreen=fullscreen onClose=(action "closeAnimatedDialog") openFrom="#dialog-button" closeTo="#bottom-of-card" }}
+
+    {{#paper-dialog-content}}
+      <h2 class="md-title">This dialog is animated!</h2>
+      <p>It opened from above, but it will close to below.</p>
+    {{/paper-dialog-content}}
+
+    {{#paper-dialog-actions class="layout-row" }}
+      <span class="flex"></span>
+      <a {{action 'closeAnimatedDialog'}}>{{#paper-button}}Close{{/paper-button}}</a>
+
+    {{/paper-dialog-actions}}
+
+  {{/paper-dialog}}
+{{/if}}
+ <!-- onClose=(action "closeAnimatedDialog") -->
+ <!-- onClick=(action "closeAnimatedDialog") -->
+ <!-- {{#paper-button primary=true onClick=(action "closeAnimatedDialog")}}Okay!{{/paper-button}} -->
