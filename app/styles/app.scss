@@ -111,7 +111,7 @@ p {
 }
 
 .blog-container {
-
+  padding: 0 2em;
   .blog-content {
 
   }
@@ -129,7 +129,11 @@ p {
     height: 2em;
     margin: 1em;
 }
-
+.dash-board-card {
+    max-height: 500px;
+    overflow: hidden;
+    overflow: scroll;
+}
 .footer {
   background-color: $def-primary;
   font-size: 1em;
