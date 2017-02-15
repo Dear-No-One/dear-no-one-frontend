@@ -12,7 +12,7 @@
    {{paper-input textarea=true block=true label="Biography" maxlength=150 passThru=(hash rows=5 maxRows=5)
      value=biography onChange=(action (mut biography))}}
    <p>Name: {{name}}</p>
-   <p>Email: {{ }}</p>
+   <p>Email: {{email}}</p>
 
    <h3>Input Errors</h3>
    <p>
@@ -82,17 +82,4 @@
      {{paper-input label="Email (no messages)" type="email" value=user.email onChange=(action (mut user.email)) icon="email" required=true hideAllMessages=true}}
      {{paper-input placeholder="Address" type="text" value=user.address onChange=(action (mut user.address)) icon="place"}}
      {{paper-input label="Name on right" type="text" value=name2 onChange=(action (mut name2)) iconRight="person"}}
-   </p> -->
-   <!-- {{#paper-form as |form|}}
-   <div class="layout-row">
-  {{form.input label="Favorite Letter" value=favoriteLetter onChange=(action (mut favoriteLetter)) required=true maxlength=1}}
-</div>
-<div class="layout-row">
-  {{#form.submit-button raised=true primary=true disabled=form.isInvalid}}
-    Submit
-  {{/form.submit-button}}
-</div>
-<div class="layout-row">
-  {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
-</div>
-   {{/paper-form}}
+   </p>
