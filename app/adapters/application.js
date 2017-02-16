@@ -8,7 +8,7 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
   authorizer: 'authorizer:custom',
   // authorizer: 'authorizer:application',
   namespace: 'api',
-  host: `${config.host}`,
+  host: `https://dear-no-one.herokuapp.com/`,
   session: Ember.inject.service(),
  //  headers: Ember.computed('session.accessToken', function() {
  //   return {
