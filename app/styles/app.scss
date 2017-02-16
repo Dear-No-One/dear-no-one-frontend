@@ -49,6 +49,21 @@ p {
    align-items: center;
 }
 
+.parallax-2 {
+   @include parallax("https://static.pexels.com/photos/309166/pexels-photo-309166.jpeg");
+}
+
+.template {
+    @include parallax("https://images.pexels.com/photos/274060/pexels-photo-274060.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+
+    .blog-title-card {
+      padding: 1em 5em;
+    }
+}
+
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -81,9 +96,7 @@ p {
         justify-content: center;
     }
 }
-.parallax-2 {
-   @include parallax("https://static.pexels.com/photos/309166/pexels-photo-309166.jpeg");
-}
+
 
 .parallax-2-text, .parallax-3-text   {
  padding: 1.5em 5em;
@@ -97,27 +110,39 @@ p {
  }
 }
 
-.template {
-    @include parallax("https://images.pexels.com/photos/274060/pexels-photo-274060.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
-    height: 60vh;
-}
-
 .blog-container {
-
+  padding: 0 2em;
   .blog-content {
-    background-color: red;
-    border: 1px solid black;
+
   }
 
   .blog-sidebar {
-    background-color: yellow;
-    border: 1px solid black;
+
   }
 }
+.bio-container {
+    // height: 95%;
+    // margin-bottom: 2.5em;
+}
+.social-icon {
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+}
+.dash-board-card {
+    max-height: 500px;
+    overflow: hidden;
+    overflow: scroll;
+}
 
+.blog-post-dialog {
+  width: 80vw;
+}
 
 .footer {
   background-color: $def-primary;
   font-size: 1em;
   text-align: center;
+  position: fixed;
+  bottom: 0;
 }

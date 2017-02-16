@@ -1,0 +1,12 @@
+{{#paper-form onSubmit=(action "logForm") as |form|}}
+  <div class="layout-row">
+    <div class="layout-column flex-100">
+      {{form.input label="Post Title" value=firstName onChange=(action (mut firstName)) required=true}}
+      {{form.input label="Post Image" value=lastName onChange=(action (mut lastName))}}
+      {{form.input label="Post Body" value=postBody onChange=(action (mut postBody)) textarea=true block=true required=true passThru=(hash rows=5 maxRows=5)}}
+    </div>
+  </div>
+  <div class="layout-row">
+    {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
+  </div>
+{{/paper-form}}
