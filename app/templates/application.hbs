@@ -3,19 +3,21 @@
     {{#link-to 'index'}}{{paper-icon 'home'}}
       {{#paper-button}}Home{{/paper-button}}
     {{/link-to}}
-    {{#link-to 'form'}}
-      {{#paper-button}}Form{{/paper-button}}
-    {{/link-to}}
-    {{#link-to 'dashboard'}}
-      {{#paper-button}}Dash Board{{/paper-button}}
-    {{/link-to}}
-    {{#link-to 'blog'}}
-      {{#paper-button}}Blog{{/paper-button}}
-    {{/link-to}}
+    {{#if session.isAuthenticated}}
+      {{#link-to 'form'}}
+        {{#paper-button}}Form{{/paper-button}}
+      {{/link-to}}
+      {{#link-to 'dashboard'}}
+        {{#paper-button}}Dash Board{{/paper-button}}
+      {{/link-to}}
+      {{#link-to 'blog'}}
+        {{#paper-button}}Blog{{/paper-button}}
+      {{/link-to}}
+    {{/if}}
     <div class="paper-right">
-
+      {{#if session.isAuthenticated}}
       <a {{action 'openAnimatedDialog'}}>{{#paper-button id="dialog-start"}}Create Blog{{/paper-button}}</a>
-
+      {{/if}}
       {{paper-icon 'person'}}
 
       {{#if session.isAuthenticated}}
