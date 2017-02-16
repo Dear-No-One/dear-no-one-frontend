@@ -18,9 +18,6 @@
 
       {{paper-icon 'person'}}
 
-      {{#if session.currentUser}}
-        {{#paper-button action='logout' }}Logout{{/paper-button}}
-
       {{#if session.isAuthenticated}}
         {{#paper-button action='invalidateSession'}}Logout{{/paper-button}}
 
