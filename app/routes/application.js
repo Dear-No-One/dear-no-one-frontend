@@ -6,6 +6,7 @@ const { service } = Ember.inject;
 export default Ember.Route.extend(ApplicationRouteMixin, {
   actions: {
   invalidateSession: function() {
+    console.log('ok');
       this.get('session').invalidate();
   }
 }
