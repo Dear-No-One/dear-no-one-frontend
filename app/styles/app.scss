@@ -66,11 +66,10 @@ p {
     justify-content: center;
     align-items: center;
 
-    .blog-title-card {
-      padding: 1em 5em;
-    }
 }
-
+.blog-title-card {
+  padding: 1em 7em;
+}
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -151,6 +150,11 @@ p {
 .theme-choice-1 {
     color: blue
 }
+// .dash-board-card {
+//     max-width: 80%;
+//     display: flex;
+//     align-items: center;
+// }
 
 .footer {
   background-color: $def-primary;

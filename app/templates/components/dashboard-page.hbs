@@ -1,8 +1,29 @@
-<h1>Our Blog Post</h1>
-
-{{#each model as |blog|}}
-  <article>
-    <h1>{{blog.title}}</h1>
-    <h3>{{blog.body}}</h3>
-  </article>
+{{#each model.members as |member|}}
+<h1>Welcome {{member.username}}</h1>
 {{/each}}
+<div class="layout-row flex dash-board-card blog-title-card">
+  <div class="flex">
+    {{#each model.blogs as |blog|}}
+      {{#paper-card as |card|}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}{{blog.title}}{{/text.headline}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.content}}
+          <p>
+            {{blog.blogs.body}}
+          </p>
+        {{/card.content}}
+        {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
+          {{#actions.icons}}
+            <img src="assets/facebook.png" alt="" class="social-icon">
+            <img src="assets/twitter.png" alt="" class="social-icon">
+            <img src="assets/instagram.png" alt="" class="social-icon">
+          {{/actions.icons}}
+        {{/card.actions}}
+      {{/paper-card}}
+    {{/each}}
+
+  </div>
+</div>
