@@ -13,8 +13,6 @@ export default Ember.Component.extend({
             this.sendAction('showAnimatedDialog');
 
             console.log(this.showAnimatedDialog);
-
-
         }
     }
 
