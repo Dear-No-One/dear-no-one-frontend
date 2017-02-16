@@ -21,7 +21,9 @@
       {{paper-icon 'person'}}
 
       {{#if session.isAuthenticated}}
-        {{#paper-button action='invalidateSession'}}Logout{{/paper-button}}
+        {{#paper-form onSubmit=(action "invalidateSession") as |form|}}
+          {{#form.submit-button}}Logout{{/form.submit-button}}
+        {{/paper-form}}
 
       {{else}}
         {{#link-to 'login'}}
