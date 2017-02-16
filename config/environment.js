@@ -49,7 +49,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.host = 'https://jwt-rails-sample-app.herokuapp.com'
+    ENV.host = 'https://dear-no-one.herokuapp.com/'
   }
 
   return ENV;
