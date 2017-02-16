@@ -1,4 +1,3 @@
-
 <div class="layout-row flex">
   <div class="flex template layout-column">
     <div class="flex flex-gt-xs-33">
@@ -8,8 +7,11 @@
     </div>
   </div>
 </div>
-<div class="layout-row layout-xs-column blog-container">
-    <div class="flex flex-gt-xs-80">
+<div class="layout-row layout-xs-column blog-container-full">
+    <div class="flex flex-gt-xs-33">
+      {{#paper-card as |card|}}
+          {{card.image size="md" src="https://pbs.twimg.com/profile_images/759389830975455232/4-UdzhN5_400x400.jpg" alt="Tomster" title="Johnny"}}
+      {{/paper-card}}
         {{#paper-card class="bio-container" as |card|}}
           {{#card.title as |title|}}
             <p>Church-key ethical succulents, YOLO affogato next level letterpress
@@ -27,18 +29,23 @@
          {{/actions.icons}}
        {{/card.actions}}
         {{/paper-card}}
+
+          <div class=" flex blog-container-full flex-gt-xs-66 layout-align-end">
+          {{#each data as |blogPost|}}
+          {{blog-post-template-3 blog=blogPost}}
+          {{/each}}
+          </div>
+
     </div>
 
-    <div class="flex flex-gt-xs-20">
-        {{#paper-card as |card|}}
-            {{card.image size="md" src="https://pbs.twimg.com/profile_images/759389830975455232/4-UdzhN5_400x400.jpg" alt="Tomster" title="Johnny"}}
-        {{/paper-card}}
-    </div>
+
+
+
 </div>
-<div class="layout-row layout-xs-column blog-container">
-  <div class=" flex blog-content">
+<!-- <div class="layout-row layout-xs-column blog-container-full">
+  <div class=" flex blog-container-full flex-gt-xs-66 layout-align-end">
   {{#each data as |blogPost|}}
-  {{blog-post-template-2 blog=blogPost}}
+  {{blog-post-template-3 blog=blogPost}}
   {{/each}}
   </div>
-</div>
+</div> -->

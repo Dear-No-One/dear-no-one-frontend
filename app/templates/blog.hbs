@@ -1,4 +1,4 @@
-{{#paper-switch value=booleanProp1 onChange=(action (mut booleanProp1))}}
+<!-- {{#paper-switch value=booleanProp1 onChange=(action (mut booleanProp1))}}
    {{booleanProp1}}
  {{/paper-switch}}
 
@@ -9,9 +9,9 @@
   {{template-1 data=model}}
 
 {{else}}
- {{template-2}}
-{{/if}}
-
+ {{template-2 data=model}}
+{{/if}} -->
+{{template-3 data=model}}
 <!-- <div class="layout-row layout-xs-column">
     {{#each model as |blogPost|}}
         {{dash-board blog=blogPost}}

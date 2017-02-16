@@ -4,6 +4,13 @@ $warn: "red";
 $background: "grey";
 $link: "light-blue";
 
+/*dark theme*/
+// dark-gray #40484C
+// blue #0092C9
+// green #63AFB7
+// lite yellow #FBC800
+// dark yellow #CC9B00
+
 @import 'ember-paper';
 
 $def-primary: #405952 !important;
@@ -119,6 +126,9 @@ p {
   .blog-sidebar {
 
   }
+.blog-container-full{
+
+}
 }
 .bio-container {
     // height: 95%;
