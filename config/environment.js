@@ -4,16 +4,12 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'nav-splash',
     environment: environment,
-    rootURL: '/',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      },
-      EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false
       }
     },
 
@@ -23,17 +19,26 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:custom',
+    authenticationRoute: '/login',
+    routeAfterAuthentication: '/dashboard',
+    routeIfAlreadyAuthenticated: '/dashboard'
+  };
+
+
   if (environment === 'development') {
+    ENV.host = 'http://localhost:3000';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.apiEndpoint = 'http://localhost:3000';
   }
 
   if (environment === 'test') {
     // Testem prefers this...
+    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -44,8 +49,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    //Deployed backend URL
-    //ENV.APP.apiEndpoint = 'HEROKU';
+    ENV.host = 'https://jwt-rails-sample-app.herokuapp.com'
   }
 
   return ENV;

@@ -17,8 +17,13 @@
       <a {{action 'openAnimatedDialog'}}>{{#paper-button id="dialog-start"}}Create Blog{{/paper-button}}</a>
 
       {{paper-icon 'person'}}
+
       {{#if session.currentUser}}
         {{#paper-button action='logout' }}Logout{{/paper-button}}
+
+      {{#if session.isAuthenticated}}
+        {{#paper-button action='invalidateSession'}}Logout{{/paper-button}}
+
       {{else}}
         {{#link-to 'login'}}
           {{#paper-button}}Login{{/paper-button}}

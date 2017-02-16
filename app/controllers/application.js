@@ -1,4 +1,5 @@
 import Ember from 'ember';
+
 import DS from 'ember-data';
 
 export default Ember.Controller.extend({
@@ -22,6 +23,15 @@ export default Ember.Controller.extend({
     //       title: this.postTitle,
     //       body: this.postBody
     //   });
+
+
+export default Ember.Controller.extend({
+  session: Ember.inject.service('session'),
+
+  actions: {
+    invalidateSession() {
+      this.get('session').invalidate();
+
     }
   }
 });
