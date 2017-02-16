@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('blog');
   this.route('new-blog-form');
   this.route('signup');
+  this.route('blogPostTemplate');
 });
 
 export default Router;
