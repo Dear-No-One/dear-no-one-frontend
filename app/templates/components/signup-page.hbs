@@ -1,9 +1,9 @@
-{{#paper-form  as |form|}}
+{{#paper-form onSubmit=(action "submitSignUp") as |form|}}
   <div class="layout-row">
-    <div class="layout-column flex-100">
+    <div class="layout-column flex-50">
       {{form.input label="username" value=username onChange=(action (mut username)) required=true}}
       {{form.input label="email" value=email onChange=(action (mut email) required=true)}}
-      {{form.input label="password" value=password onChange=(action (mut password) required=true)}}
+      {{form.input label="password" type="password" value=password onChange=(action (mut password) required=true)}}
       {{form.input label="bio" value=bio onChange=(action (mut bio)) }}
       {{form.input label="template" value=template onChange=(action (mut template)) }}
       {{form.input label="theme" value=theme onChange=(action (mut theme))}}
