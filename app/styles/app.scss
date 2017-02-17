@@ -89,11 +89,14 @@ $dark-theme-subheader: #DB995A!important;
     display: flex;
     justify-content: center;
 }
-h1{
+> h1{
   text-align:center;
   font-size: 4em;
 margin: 0;
 color: #F54F29 !important;
+}
+  label {
+    color: #f54f29!important;
 }
 }
 
@@ -199,9 +202,7 @@ h1{
     margin: 1em;
 }
 .dash-board-card {
-    max-height: 500px;
     overflow: hidden;
-    overflow: scroll;
 }
 
 .blog-post-dialog {

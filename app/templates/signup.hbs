@@ -8,22 +8,23 @@
 
   <div class="layout-row">
     <div class="layout-column flex-90">
-      {{form.input label="username" value=username onChange=(action (mut username)) required=true}}
-      {{form.input label="email" value=email onChange=(action (mut email) required=true)}}
-      {{form.input label="password" type="password" value=password onChange=(action (mut password) required=true)}}
-      {{form.input label="bio" value=bio onChange=(action (mut bio)) }}
-      {{form.input label="template" value=template onChange=(action (mut template)) }}
-      {{form.input label="theme" value=theme onChange=(action (mut theme))}}
-      {{form.input label="profilePic" value=profilePic onChange=(action (mut profilePic)) }}
-      {{form.input label="blogPic" value=blogPic onChange=(action (mut blogPic)) }}
-      {{form.input label="facebook" value=facebook onChange=(action (mut facebook)) }}
-      {{form.input label="twitter" value=twitter onChange=(action (mut twitter)) }}
-      {{form.input label="instagram" value=instagram onChange=(action (mut instagram)) }}
+      {{form.input label="Username" value=username onChange=(action (mut username)) required=true}}
+      {{form.input label="Email" value=email onChange=(action (mut email) required=true)}}
+      {{form.input label="Password" type="password" value=password onChange=(action (mut password) required=true)}}
+      {{form.input label="Bio" value=bio onChange=(action (mut bio)) }}
+      {{form.input label="Template" value=template onChange=(action (mut template)) }}
+      {{form.input label="Theme" value=theme onChange=(action (mut theme))}}
+      {{form.input label="ProfilePic" value=profilePic onChange=(action (mut profilePic)) }}
+      {{form.input label="BlogPic" value=blogPic onChange=(action (mut blogPic)) }}
+      {{form.input label="Facebook" value=facebook onChange=(action (mut facebook)) }}
+      {{form.input label="Twitter" value=twitter onChange=(action (mut twitter)) }}
+      {{form.input label="Instagram" value=instagram onChange=(action (mut instagram)) }}
+      {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
     </div>
 
   </div>
 
-  {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
+  
 
 
   </div>
