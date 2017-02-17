@@ -154,6 +154,30 @@ p {
 .blog-post-dialog {
   width: 80vw;
 }
+#default-theme-1{
+  h1 {
+      color: $dark-theme-primary;
+  }
+  p {
+      color: $dark-theme-secondary;
+  }
+  .card-container {
+      background-color: $dark-theme-accent1;
+  }
+  #card-content {
+      background-color: $dark-theme-accent1;
+  }
+  .blog-container {
+  background: red;
+  padding: 0 2em;
+}
+md-card-title-text {
+  color: red;
+}
+
+}
+
+
 .theme-choice-1 {
     h1 {
         color: $dark-theme-primary;
@@ -167,6 +191,13 @@ p {
     #card-content {
         background-color: $dark-theme-accent1;
     }
+    .blog-container {
+    background: red;
+    padding: 0 2em;
+}
+md-card-title-text {
+    color: red;
+}
     // color: blue;
 }
 // .dash-board-card {
