@@ -1,5 +1,14 @@
+<!-- <h1>TEMPLATE-2.HBS START</h1>
+{{#each member as |member|}}
+    <h1>{{member.username}}</h1>
 
-  <div class="default-theme-1">
+    {{#each member.blogs as |blog|}}
+        <h3>{{blog.postTitle}}</h3>
+    {{/each}}
+
+{{/each}} -->
+
+<div class="default-theme-1">
 <div class="{{if isTrue "theme-choice-1"}}">
 
 
@@ -7,7 +16,7 @@
       <div class="flex template layout-column">
         <div class="flex flex-gt-xs-33">
           {{#paper-card class="blog-title-card" as |card|}}
-            <h1 id="blog-name">Blog Name</h1>
+            <h1 id="blog-name">Alex's Blog</h1>
           {{/paper-card}}
         </div>
       </div>
@@ -16,7 +25,8 @@
 
 
       {{#paper-switch value=isTrue onChange=(action (mut isTrue))}}
-        <!-- {{booleanProp1}} -->
+        <!-- {{isTrue}} -->
+        <span>Theme</span>
       {{/paper-switch}}
     </div>
     <div class="layout-row layout-xs-column blog-container">
@@ -29,9 +39,12 @@
       <div class="flex flex-gt-xs-80 blog-container">
         {{#paper-card class="blog-container" as |card|}}
           {{#card.title class="blog-container" as |title|}}
+            {{#title.text as |text|}}
+            {{#text.headline}}<h2>Alex Mack</h2>{{/text.headline}}
             <p>Church-key ethical succulents, YOLO affogato next level letterpress 8-bit lo-fi ugh jean shorts tousled kickstarter microdosing polaroid. Narwhal hell of butcher cray, woke kickstarter dreamcatcher mlkshk letterpress celiac tofu edison bulb
               gastropub church-key distillery.
             </p>
+            {{/title.text}}
           {{/card.title}}
           {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
             {{#actions.icons class="blog-container"}}
@@ -48,8 +61,8 @@
     </div>
     <div class="layout-row layout-xs-column blog-container">
       <div class=" flex blog-content">
-        {{#each data as |blogPost|}}
-          {{blog-post-template-2 blog=blogPost}}
+        {{#each member as |member|}}
+          {{blog-post-template-2 member=member}}
         {{/each}}
       </div>
     </div>

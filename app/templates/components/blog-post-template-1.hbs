@@ -1,5 +1,5 @@
 {{#each member.blogs as |blog|}}
-<h1>{{blog.postTitle}}</h1>
+<!-- <h1>{{blog.postTitle}}</h1> -->
 
 <div id="default-theme-1">
 <div class="{{if isTrue "theme-choice-1"}}">
@@ -8,7 +8,7 @@
   {{#card.title  as |title| }}
     {{#title.text as |text|}}
       {{#text.headline}}<h1>{{blog.postTitle}}</h1>{{/text.headline}}
-      {{#text.subhead}}<h2>{{member.username}}</h2>{{/text.subhead}}
+      {{#text.subhead}}<h2>Author: {{member.username}}</h2>{{/text.subhead}}
     {{/title.text}}
   {{/card.title}}
 

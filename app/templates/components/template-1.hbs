@@ -15,7 +15,7 @@
   <div class="flex template layout-column">
     <div class="flex flex-gt-xs-33">
       {{#paper-card class="blog-title-card" as |card|}}
-        <h1 id="blog-name">Blog Name</h1>
+        <h1 id="blog-name">Sam's Blog</h1>
       {{/paper-card}}
     </div>
   </div>
@@ -24,8 +24,8 @@
 
 
   {{#paper-switch value=isTrue onChange=(action (mut isTrue))}}
-    {{booleanProp1}}
-
+    <!-- {{isTrue}} -->
+    <span>Theme</span>
   {{/paper-switch}}
 </div>
 <div class="layout-row layout-xs-column blog-container md-padding blog-container">
@@ -45,9 +45,7 @@
 
       {{#card.title blog-container as |title|}}
         {{#title.text blog-container as |text|}}
-        {{#each model.logged as |member|}}
-        <p>{{member.username}}</p>
-        {{/each}}
+        {{#text.headline}}<h2>Sammy G</h2>{{/text.headline}}
         {{/title.text}}
       {{/card.title}}
       {{#card.content}}

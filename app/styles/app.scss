@@ -248,7 +248,9 @@ $light-theme-primary: #D6D4A0 !important;
     background: $dark-theme-primary;
 
     p {
-      color: #654236;
+        line-height: 1.5em;
+        font-size: 1.25em;
+        color: #654236;
     }
 
     h1 {
