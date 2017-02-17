@@ -3,10 +3,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model() {
-    //     return Ember.RSVP.hash({
-    //      blogs: this.get('store').findAll('blog'),
-    //      members: this.get('store').find('member', )
-    //  });
-      return this.get('store').findAll('blog');
+        return Ember.RSVP.hash({
+         blogs: this.get('store').findAll('blog'),
+         member: this.get('store').peekAll('member'),
+         member: this.get('store').findAll('member')
+     });
+      // return this.get('store').findAll('blog');
   }
 });

@@ -4,7 +4,8 @@ import Base from 'ember-simple-auth/authenticators/base';
 import config from '../config/environment';
 const { RSVP: { Promise }, $: { ajax }, run } = Ember;
 export default Base.extend({
-  tokenEndpoint: `https://dear-no-one.herokuapp.com/api/token`,
+  // tokenEndpoint: `https://dear-no-one.herokuapp.com/api/token`,
+  tokenEndpoint: `http://localhost:3000/api/token`,
   restore(data) {
     return new Promise((resolve, reject) => {
       if (!Ember.isEmpty(data.token)) {
