@@ -3,8 +3,12 @@
 <!-- {{/each}} -->
 <div class="layout-row flex dash-board-card blog-title-card">
   <div class="flex">
-    <h1>{{blog.member.username}}</h1>
-    {{#each model as |blog|}}
+    {{#each model.member as |member|}}
+      <h1>Hello {{member.username}}!</h1>
+      <h2>Go fuck yourself {{member.id}} times.</h2>
+    {{/each}}
+
+    {{#each model.blogs as |blog|}}
       {{#paper-card as |card|}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
