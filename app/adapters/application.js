@@ -16,4 +16,5 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
  //   };
  // })
   host: 'https://dear-no-one.herokuapp.com'
+  // host: 'http://localhost:3000'
 });
