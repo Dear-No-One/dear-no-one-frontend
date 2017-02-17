@@ -4,7 +4,7 @@
     {{#paper-card class="blog-container" as |card|}}
       {{#card.title class="blog-container" as |title|}}
         {{#title.text as |text|}}
-          {{#text.headline}}<h1>Blog Post Title</h1>{{/text.headline}}
+          {{#text.headline}}<h1>{{blog.title}}</h1>{{/text.headline}}
           {{#text.subhead}}<h2>Blog Post Sub-Title</h2>{{/text.subhead}}
         {{/title.text}}
       {{/card.title}}
