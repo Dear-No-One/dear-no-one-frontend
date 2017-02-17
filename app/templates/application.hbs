@@ -1,12 +1,11 @@
+<div class="main-content">
 {{#paper-toolbar class="navbar" }}
   <div class="md-toolbar-tools">
     {{#link-to 'index'}}{{paper-icon 'home'}}
       {{#paper-button}}Home{{/paper-button}}
     {{/link-to}}
     {{#if session.isAuthenticated}}
-      {{#link-to 'form'}}
-        {{#paper-button}}Form{{/paper-button}}
-      {{/link-to}}
+
       {{#link-to 'dashboard'}}
         {{#paper-button}}Dash Board{{/paper-button}}
       {{/link-to}}
@@ -37,8 +36,11 @@
   </div>
 {{/paper-toolbar}}
 
-{{outlet}}
+<div class="body-content">
 
+
+{{outlet}}
+</div>
 {{#paper-toolbar class="footer" id="dialog-end"}}
   <p>&copy; Amanda & Friends</p>
 {{/paper-toolbar}}
@@ -70,3 +72,4 @@
 
   {{/paper-dialog}}
 {{/if}}
+</div>

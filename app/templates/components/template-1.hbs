@@ -1,14 +1,23 @@
+<div class="default-theme-1">
+<div class="{{if isTrue "theme-choice-1"}}">
 
 <div class="layout-row flex">
   <div class="flex template layout-column">
     <div class="flex flex-gt-xs-33">
       {{#paper-card class="blog-title-card" as |card|}}
-        <h1>Blog Name</h1>
+        <h1 id="blog-name">Blog Name</h1>
       {{/paper-card}}
     </div>
   </div>
 </div>
-<div class="layout-row layout-xs-column blog-container md-padding">
+<div class="layout-row blog-container">
+
+
+  {{#paper-switch value=isTrue onChange=(action (mut isTrue))}}
+    <!-- {{booleanProp1}} -->
+  {{/paper-switch}}
+</div>
+<div class="layout-row layout-xs-column blog-container md-padding blog-container">
   <div class=" flex flex-gt-xs-66 blog-content">
       {{#each data as |blogPost|}}
         {{blog-post-template-1 blog=blogPost}}
@@ -18,11 +27,11 @@
   <div class="flex flex-gt-xs-33 blog-sidebar">
 
 
-    {{#paper-card as |card|}}
+    {{#paper-card class="blog-container" as |card|}}
       {{card.image src="https://pbs.twimg.com/profile_images/874417950/003-2-square_400x400.jpg" alt="Washed Out" title="Washed Out"}}
-      {{#card.title as |title|}}
-        {{#title.text as |text|}}
-          {{#text.headline}}Sammy G{{/text.headline}}
+      {{#card.title blog-container as |title|}}
+        {{#title.text blog-container as |text|}}
+
         {{/title.text}}
       {{/card.title}}
       {{#card.content}}
@@ -39,4 +48,6 @@
       {{/card.actions}}
     {{/paper-card}}
   </div>
+</div>
+</div>
 </div>
