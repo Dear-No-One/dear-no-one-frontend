@@ -19,8 +19,8 @@
 </div>
 <div class="layout-row layout-xs-column blog-container md-padding blog-container">
   <div class=" flex flex-gt-xs-66 blog-content">
-      {{#each data as |blogPost|}}
-        {{blog-post-template-1 blog=blogPost}}
+      {{#each model.member as |member|}}
+        {{blog-post-template-1 data=member}}
       {{/each}}
 
   </div>
@@ -29,9 +29,10 @@
 
     {{#paper-card class="blog-container" as |card|}}
       {{card.image src="https://pbs.twimg.com/profile_images/874417950/003-2-square_400x400.jpg" alt="Washed Out" title="Washed Out"}}
+
       {{#card.title blog-container as |title|}}
         {{#title.text blog-container as |text|}}
-
+        <p>{{model.member.username}}</p>
         {{/title.text}}
       {{/card.title}}
       {{#card.content}}

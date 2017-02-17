@@ -1,3 +1,6 @@
+
+
+{{#each data.blogs as |blog|}}
 <div id="default-theme-1">
   <div class="{{if isTrue "theme-choice-1"}}">
 
@@ -5,19 +8,15 @@
 {{#paper-card class="blog-container" as |card| }}
   {{#card.title  as |title| }}
     {{#title.text as |text|}}
-      {{#text.headline}}<h1>{{blog.title}}</h1>{{/text.headline}}
-      {{#text.subhead}}<h2>Blog Post Sub-Title</h2>{{/text.subhead}}
+      {{#text.headline}}<h1>{{blog.postTitle}}</h1>{{/text.headline}}
+      {{#text.subhead}}<h2>{{data.username}}</h2>{{/text.subhead}}
     {{/title.text}}
   {{/card.title}}
 
 
 
   {{#card.content class="layout-row layout-align-space-between card-content"}}
-    <p>THIS ashsagsahsgMigas air plant 8-bit, salvia YOLO distillery polaroid typewriter blue bottle mustache vaporware. Pabst cronut small batch gluten-free vegan, drinking vinegar chillwave before they sold out yuccie cray. Poke cliche green juice polaroid cardigan
-      kitsch. PBR&B meditation wolf hashtag asymmetrical. Everyday carry farm-to-table jean shorts, knausgaard tbh readymade mlkshk. Chambray kogi master cleanse, la croix fixie crucifix semiotics woke. Pork belly swag thundercats, intelligentsia
-      occupy bitters scenester. Fashion axe mustache vegan prism. Meggings activated charcoal copper mug roof party. Man braid occupy ethical health goth, tbh shabby chic la croix organic YOLO brooklyn banh mi slow-carb. Lyft marfa tbh coloring book
-      you probably haven't heard of them. Viral pabst paleo, fanny pack ennui tousled taxidermy meggings banh mi. Master cleanse pork belly trust fund four loko leggings marfa. Hella wayfarers pinterest freegan pork belly, keffiyeh air plant seitan
-      lyft biodiesel blue bottle normcore drinking vinegar pabst.</p>
+    <p>{{blog.postBody}}</p>
     {{#card.media size="xl" }}
       <div class="card-media"></div>
     {{/card.media}}
@@ -30,3 +29,4 @@
 {{/paper-card}}
 </div>
 </div>
+{{/each}}

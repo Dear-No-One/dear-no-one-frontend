@@ -4,9 +4,15 @@
 <div class="layout-row flex dash-board-card blog-title-card">
   <div class="flex">
     {{#each model.member as |member|}}
+
       <h1>Hello {{member.username}}!</h1>
+      {{#each member.blogs as |blog|}}
+      <h3>{{blog.postTitle}}</h3>
+      <h3>{{member.username}}</h3>
+      {{/each}}
+
+
       <h2>Go fuck yourself {{member.id}} times.</h2>
-      <h3>{{member.blogs}}</h3>
     {{/each}}
 
     {{#each model.blogs as |blog|}}
