@@ -12,5 +12,5 @@ export default DS.Model.extend({
   facebook: DS.attr(),
   twitter: DS.attr(),
   instagram: DS.attr(),
-  blogs: DS.hasMany('blog', {async: true})
+  blogs: DS.attr()
 });
