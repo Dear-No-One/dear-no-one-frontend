@@ -21,10 +21,11 @@ $def-taupey: #FFD393 !important;
 $def-accent1: #FF974F !important;
 $def-accent2: #F54F29 !important;
 
-$dark-theme-primary: #40484C !important;
-$dark-theme-secondary: #0092C9 !important;
-$dark-theme-accent1: #FBC800 !important;
-
+$dark-theme-primary: #D6D4A0 !important;
+$dark-theme-secondary: #E24E1B !important;
+$dark-theme-accent1: #DB995A !important;
+$dark-theme-text: #654236 !important;
+$dark-theme-subheader: #DB995A!important;
 
 @mixin button-style {
   padding: .5em 2em;
@@ -125,21 +126,8 @@ p {
 
 .blog-container {
   padding: 0 2em;
-  .blog-content {
-
-  }
-
-  .blog-sidebar {
-
-  }
-.blog-container-full{
-
 }
-}
-.bio-container {
-    // height: 95%;
-    // margin-bottom: 2.5em;
-}
+
 .social-icon {
     width: 2em;
     height: 2em;
@@ -154,57 +142,51 @@ p {
 .blog-post-dialog {
   width: 80vw;
 }
-#default-theme-1{
-  h1 {
-      color: $dark-theme-primary;
-  }
-  p {
-      color: $dark-theme-secondary;
-  }
-  .card-container {
-      background-color: $dark-theme-accent1;
-  }
-  #card-content {
-      background-color: $dark-theme-accent1;
+.default-theme-1{
+  .card-content {
+      background-color: $dark-theme-primary;
+      p {
+        color: $dark-theme-text;
+      }
   }
   .blog-container {
-  background: red;
-  padding: 0 2em;
-}
-md-card-title-text {
-  color: red;
+  background: $dark-theme-primary;
+  p {
+      color: $dark-theme-text;
+  }
+  h1 {
+      color: $dark-theme-secondary;
+  }
+  h2 {
+      color: $dark-theme-subheader;
+  }
 }
 
 }
 
 
 .theme-choice-1 {
-    h1 {
-        color: $dark-theme-primary;
+    .card-content {
+        background-color: $dark-theme-accent1;
+        p {
+            color: blue;
+        }
     }
+
+.blog-container {
+    background-color: $dark-theme-accent1;
     p {
-        color: $dark-theme-secondary;
+        color: blue;
     }
-    .card-container {
-        background-color: $dark-theme-accent1;
+    h1 {
+        color: blue;
     }
-    #card-content {
-        background-color: $dark-theme-accent1;
+    h2 {
+        color: blue;
     }
-    .blog-container {
-    background: red;
-    padding: 0 2em;
 }
-md-card-title-text {
-    color: red;
+
 }
-    // color: blue;
-}
-// .dash-board-card {
-//     max-width: 80%;
-//     display: flex;
-//     align-items: center;
-// }
 
 .footer {
   background-color: $def-primary;
