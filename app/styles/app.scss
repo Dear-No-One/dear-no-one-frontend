@@ -3,8 +3,7 @@ $accent: "pink";
 $warn: "red";
 $background: "grey";
 $link: "light-blue";
-<<<<<<< HEAD
-=======
+
 
 $def-primary: #405952 !important;
 $def-secondary: #9C9B7A !important;
@@ -17,30 +16,17 @@ $dark-theme-secondary: #E24E1B !important;
 $dark-theme-accent1: #DB995A !important;
 $light-theme-primary: #D6D4A0 !important;
 
->>>>>>> sass-attemplt
 /*dark theme*/
 // blue #0092C9
 // green #63AFB7
 // lite yellow #FBC800
 // dark yellow #CC9B00
 @import 'ember-paper';
-<<<<<<< HEAD
-$def-primary: #405952 !important;
-$def-secondary: #9C9B7A !important;
-$def-taupey: #FFD393 !important;
-$def-accent1: #FF974F !important;
-$def-accent2: #F54F29 !important;
-$dark-theme-primary: #D6D4A0 !important;
-$dark-theme-secondary: #E24E1B !important;
-$dark-theme-accent1: #DB995A !important;
-$dark-theme-text: #654236 !important;
-$dark-theme-subheader: #DB995A!important;
-=======
 
 
 
 
->>>>>>> sass-attemplt
+
 @mixin button-style {
   padding: 0.5em 2em;
   opacity: 0.8;
@@ -235,49 +221,20 @@ $dark-theme-subheader: #DB995A!important;
 .blog-post-dialog {
   width: 80vw;
 }
-<<<<<<< HEAD
 
 .default-theme-1 {
-  .card-content {
-    background-color: $dark-theme-primary;
-
-    p {
-      color: $dark-theme-text;
-    }
-=======
-.default-theme-1{
     #blog-name {
         color: #E24E1B;
     }
     .blog-title-card {
         background-color: rgba(214, 212, 160, 0.48)!important;
-        // opacity: .48;
     }
   .card-content {
       background-color: $dark-theme-primary;
-    //   p {
-    //     color: yellow;
-    //   }
->>>>>>> sass-attemplt
   }
-
   .blog-container {
-<<<<<<< HEAD
     background: $dark-theme-primary;
 
-    p {
-      color: $dark-theme-text;
-    }
-
-    h1 {
-      color: $dark-theme-secondary;
-    }
-
-    h2 {
-      color: $dark-theme-subheader;
-    }
-=======
-  background: $dark-theme-primary;
   p {
       color: #654236;
   }
@@ -286,18 +243,16 @@ $dark-theme-subheader: #DB995A!important;
   }
   h2 {
       color: red;
->>>>>>> sass-attemplt
-  }
+        }
+    }
 }
 
+
 .theme-choice-1 {
-<<<<<<< HEAD
   .card-content {
     background-color: $dark-theme-accent1;
 
     p {
-      color: blue;
-=======
     #blog-name {
         color: #007FFF;
     }
@@ -307,45 +262,39 @@ $dark-theme-subheader: #DB995A!important;
 
     .card-content {
         background-color: #D4DCFF!important;
->>>>>>> sass-attemplt
     }
   }
 
-<<<<<<< HEAD
   .blog-container {
     background-color: $dark-theme-accent1;
 
     p {
       color: blue;
-=======
+
 .blog-container {
     background-color: #D4DCFF!important;
     p {
         color: #904C77;
->>>>>>> sass-attemplt
     }
 
     h1 {
-<<<<<<< HEAD
+
       color: blue;
-=======
+
         color: #007FFF;
->>>>>>> sass-attemplt
+
     }
 
     h2 {
-<<<<<<< HEAD
-      color: blue;
-=======
-        color: #904C77;
 
->>>>>>> sass-attemplt
+        color: #904C77;
     }
   }
-}
+  }
+
 
 .footer {
-    
+
   background-color: $def-primary;
   font-size: 1em;
   text-align: center;
