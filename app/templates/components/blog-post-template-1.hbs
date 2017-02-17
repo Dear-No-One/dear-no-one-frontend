@@ -1,14 +1,14 @@
+{{#each member.blogs as |blog|}}
+<h1>{{blog.postTitle}}</h1>
 
-{{#each data.blogs as |blog|}}
 <div id="default-theme-1">
-  <div class="{{if isTrue "theme-choice-1"}}">
-
+<div class="{{if isTrue "theme-choice-1"}}">
 
 {{#paper-card class="blog-container" as |card| }}
   {{#card.title  as |title| }}
     {{#title.text as |text|}}
       {{#text.headline}}<h1>{{blog.postTitle}}</h1>{{/text.headline}}
-      {{#text.subhead}}<h2>{{data.username}}</h2>{{/text.subhead}}
+      {{#text.subhead}}<h2>{{member.username}}</h2>{{/text.subhead}}
     {{/title.text}}
   {{/card.title}}
 
@@ -28,4 +28,5 @@
 {{/paper-card}}
 </div>
 </div>
+
 {{/each}}
