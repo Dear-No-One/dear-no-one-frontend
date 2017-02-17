@@ -3,58 +3,44 @@ $accent: "pink";
 $warn: "red";
 $background: "grey";
 $link: "light-blue";
-
-
-
 /*dark theme*/
-
 // blue #0092C9
 // green #63AFB7
 // lite yellow #FBC800
 // dark yellow #CC9B00
-
 @import 'ember-paper';
-
 $def-primary: #405952 !important;
 $def-secondary: #9C9B7A !important;
 $def-taupey: #FFD393 !important;
 $def-accent1: #FF974F !important;
 $def-accent2: #F54F29 !important;
-
 $dark-theme-primary: #D6D4A0 !important;
 $dark-theme-secondary: #E24E1B !important;
 $dark-theme-accent1: #DB995A !important;
 $dark-theme-text: #654236 !important;
 $dark-theme-subheader: #DB995A!important;
-
 @mixin button-style {
-  padding: .5em 2em;
-  opacity: .8;
+  padding: 0.5em 2em;
+  opacity: 0.8;
   // background-color: $def-accent1;
   // color: $def-primary;
 }
 @mixin parallax ($url) {
-    background-image:url($url);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: column;
+  background-image: url($url);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
-.homepage{
+
+.homepage {
   p {
-      font-size: 1.25em;
-      line-height: 1.5;
+    font-size: 1.25em;
+    line-height: 1.5;
   }
-
-
-
 }
-
-
-
 // p {
 //   font-size: 1.25em;
 //   line-height: 1.5;
@@ -65,22 +51,25 @@ $dark-theme-subheader: #DB995A!important;
 }
 
 .navbar {
-    background: $def-primary;
+  background: $def-primary;
 }
 
 .parallax {
-   @include parallax("https://static.pexels.com/photos/302541/pexels-photo-302541.jpeg");
-   height: 75vh;
-   justify-content: center;
-   align-items: center;
-   p{
-     color:white;
-     font-size:1.5em;
-     font-weight:bold;
-   }
+  @include parallax("https://static.pexels.com/photos/302541/pexels-photo-302541.jpeg");
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
 }
+
 .signup {
-  padding:5%;
+  padding: 5%;
+
   > .layout-row {
     /* border: solid; */
     border-radius: 5px;
@@ -88,55 +77,68 @@ $dark-theme-subheader: #DB995A!important;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
-}
-> h1{
-  text-align:center;
-  font-size: 4em;
-margin: 0;
-color: #F54F29 !important;
-}
+    padding-bottom: 5%;
+  }
+
+  > h1 {
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 4em;
+    margin: 0;
+    color: #F54F29 !important;
+  }
+
   label {
     color: #f54f29!important;
-}
+  }
+
+  button {
+    width: 50%;
+    align-self: center;
+  }
 }
 
 .login {
-    display:flex;
-    padding: 2%;
-    align-items:center;
-    flex-direction:column;
-h1{
-  font-size: 4em;
-  margin: 0;
-  color: $def-accent2;
-}
-.f{
-  display:flex;
-    flex-direction:column;
-  border-radius:5%;
-  padding:2%;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-}
-.parallax-2 {
-   @include parallax("https://static.pexels.com/photos/309166/pexels-photo-309166.jpeg");
+  display: flex;
+  padding: 2%;
+  align-items: center;
+  flex-direction: column;
 
-   h2{
-     color:white;
-   }
-   p{
-     color:white;
-     font-size:1em;
-   }
+  h1 {
+    font-size: 4em;
+    margin: 0;
+    color: $def-accent2;
+  }
+
+  .f {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    padding: 2%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.parallax-2 {
+  @include parallax("https://static.pexels.com/photos/309166/pexels-photo-309166.jpeg");
+
+  h2 {
+    color: white;
+  }
+
+  p {
+    color: white;
+    font-size: 1em;
+  }
 }
 
 .template {
-    @include parallax("https://images.pexels.com/photos/274060/pexels-photo-274060.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
-    height: 60vh;
-    justify-content: center;
-    align-items: center;
-
+  @include parallax("https://images.pexels.com/photos/274060/pexels-photo-274060.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
 }
+
 .blog-title-card {
   padding: 1em 7em;
 }
@@ -163,33 +165,35 @@ h1{
 }
 
 .index-content {
-    padding-top: 1.5em;
-    background-color: $def-primary;
+  padding-top: 1.5em;
+  background-color: $def-primary;
 }
+
 .card-info {
-    color: $def-taupey;
-    padding: 1em 5em;
-    line-height: 1.5em;
-    text-align: center;
+  color: $def-taupey;
+  padding: 1em 5em;
+  line-height: 1.5em;
+  text-align: center;
 
-    .card-icon {
-      color:white;
-        display: flex;
-        justify-content: center;
-    }
+  .card-icon {
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
 }
 
+.parallax-2-text,
+.parallax-3-text {
+  padding: 8em 7em;
+  background: #f54f29;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-.parallax-2-text, .parallax-3-text   {
- padding: 8em 7em;
- background: #f54f29;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- p {
-   text-align: center;
- }
+  p {
+    text-align: center;
+  }
 }
 
 .blog-container {
@@ -197,64 +201,73 @@ h1{
 }
 
 .social-icon {
-    width: 2em;
-    height: 2em;
-    margin: 1em;
+  width: 2em;
+  height: 2em;
+  margin: 1em;
 }
+
 .dash-board-card {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .blog-post-dialog {
   width: 80vw;
 }
-.default-theme-1{
+
+.default-theme-1 {
   .card-content {
-      background-color: $dark-theme-primary;
-      p {
-        color: $dark-theme-text;
-      }
-  }
-  .blog-container {
-  background: $dark-theme-primary;
-  p {
+    background-color: $dark-theme-primary;
+
+    p {
       color: $dark-theme-text;
+    }
   }
-  h1 {
+
+  .blog-container {
+    background: $dark-theme-primary;
+
+    p {
+      color: $dark-theme-text;
+    }
+
+    h1 {
       color: $dark-theme-secondary;
-  }
-  h2 {
+    }
+
+    h2 {
       color: $dark-theme-subheader;
+    }
   }
 }
-
-}
-
 
 .theme-choice-1 {
-    .card-content {
-        background-color: $dark-theme-accent1;
-        p {
-            color: blue;
-        }
-    }
-
-.blog-container {
+  .card-content {
     background-color: $dark-theme-accent1;
-    p {
-        color: blue;
-    }
-    h1 {
-        color: blue;
-    }
-    h2 {
-        color: blue;
-    }
-}
 
+    p {
+      color: blue;
+    }
+  }
+
+  .blog-container {
+    background-color: $dark-theme-accent1;
+
+    p {
+      color: blue;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    h2 {
+      color: blue;
+    }
+  }
 }
 
 .footer {
+    
   background-color: $def-primary;
   font-size: 1em;
   text-align: center;
