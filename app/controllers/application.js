@@ -16,12 +16,21 @@ export default Ember.Controller.extend({
       this.set('showAnimatedDialog', false);
     },
     logForm() {
-      console.log(this.postTitle, this.postBody);
+        var logged = this.get('model');
+        var firstLog = logged.get('firstObject');
+        var loggedId = firstLog.get('id');
+        var self = this;
+    //   console.log(this.postTitle, this.postBody, this.store, loggedId);
      var post = this.get('store').createRecord('blog', {
           title: this.postTitle,
-          body: this.postBody
+          body: this.postBody,
+          memberId: loggedId
       });
-      post.save();
+      post.save().then(() => {
+          this.set('showAnimatedDialog', false);
+          self.refresh();
+      });
+
     },
     // submitSignUp() {
     //   console.log(this.username);

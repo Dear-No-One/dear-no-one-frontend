@@ -32,7 +32,9 @@
 
       {{#card.title blog-container as |title|}}
         {{#title.text blog-container as |text|}}
-        <p>{{model.member.username}}</p>
+        {{#each model.logged as |member|}}
+        <p>{{member.username}}</p>
+        {{/each}}
         {{/title.text}}
       {{/card.title}}
       {{#card.content}}

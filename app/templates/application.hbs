@@ -47,13 +47,13 @@
 
 
 {{#if showAnimatedDialog}}
-  {{#paper-dialog class="blog-post-dialog" fullscreen=fullscreen onClose=(action "closeAnimatedDialog") openFrom="#dialog-start" closeTo="#dialog-end" }}
+  {{#paper-dialog class="blog-post-dialog" fullscreen=fullscreen onClose=(action "closeAnimatedDialog") closeTo="#dialog-end" }}
 
     {{#paper-dialog-content}}
       {{#paper-form onSubmit=(action "logForm") as |form|}}
         <div class="layout-row">
           <div class="layout-column flex-100">
-            {{form.input label="Post Title" value=postTitle onChange=(action (mut postTitle)) required=true}}
+            {{form.input label="Post Title" value=postTitle onChange=(action (mut postTitle)) required=true default="hello"}}
             {{form.input label="Post Body" value=postBody onChange=(action (mut postBody)) textarea=true block=true required=true passThru=(hash rows=5 maxRows=5)}}
           </div>
         </div>
