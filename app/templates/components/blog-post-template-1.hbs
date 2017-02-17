@@ -1,12 +1,15 @@
+
 <div class="{{if isTrue "theme-choice-1"}}">
+
 
 
 {{#paper-switch value=isTrue onChange=(action (mut isTrue))}}
    <!-- {{booleanProp1}} -->
  {{/paper-switch}}
- <div id="card-content">
+
+
 {{#paper-card as |card| }}
-  {{#card.title as |title|}}
+  {{#card.title  as |title| }}
     {{#title.text as |text|}}
       {{#text.headline}}{{blog.title}}{{/text.headline}}
       {{#text.subhead}}Blog Post Sub-Title{{/text.subhead}}
@@ -31,5 +34,4 @@
     {{/card.actions}}
   {{/card.content}}
 {{/paper-card}}
-</div>
 </div>
