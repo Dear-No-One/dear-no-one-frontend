@@ -4,8 +4,10 @@ $warn: "red";
 $background: "grey";
 $link: "light-blue";
 
+
+
 /*dark theme*/
-// dark-gray #40484C
+
 // blue #0092C9
 // green #63AFB7
 // lite yellow #FBC800
@@ -18,6 +20,11 @@ $def-secondary: #9C9B7A !important;
 $def-taupey: #FFD393 !important;
 $def-accent1: #FF974F !important;
 $def-accent2: #F54F29 !important;
+
+$dark-theme-primary: #40484C !important;
+$dark-theme-secondary: #0092C9 !important;
+$dark-theme-accent1: #FBC800 !important;
+
 
 @mixin button-style {
   padding: .5em 2em;
@@ -148,7 +155,19 @@ p {
   width: 80vw;
 }
 .theme-choice-1 {
-    color: blue
+    h1 {
+        color: $dark-theme-primary;
+    }
+    p {
+        color: $dark-theme-secondary;
+    }
+    .card-container {
+        background-color: $dark-theme-accent1;
+    }
+    #card-content {
+        background-color: $dark-theme-accent1;
+    }
+    // color: blue;
 }
 // .dash-board-card {
 //     max-width: 80%;
