@@ -6,6 +6,7 @@
     {{#each model.member as |member|}}
       <h1>Hello {{member.username}}!</h1>
       <h2>Go fuck yourself {{member.id}} times.</h2>
+      <h3>{{member.blogs}}</h3>
     {{/each}}
 
     {{#each model.blogs as |blog|}}
@@ -16,6 +17,7 @@
           {{/title.text}}
         {{/card.title}}
         {{#card.content}}
+          <h1>{{blog.memberId}}</h1>
           <p>
             {{blog.body}}
           </p>

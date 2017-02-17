@@ -15,6 +15,6 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
  //     "Authorization": `Bearer ${this.get("session.accessToken")}`
  //   };
  // })
-  host: 'https://dear-no-one.herokuapp.com'
-  // host: 'http://localhost:3000'
+  // host: 'https://dear-no-one.herokuapp.com'
+  host: 'http://localhost:3000'
 });

@@ -5,7 +5,8 @@ export default Ember.Route.extend({
     model() {
         return Ember.RSVP.hash({
          blogs: this.get('store').findAll('blog'),
-         member: this.get('store').peekAll('member') 
+         member: this.get('store').peekAll('member'),
+         member: this.get('store').findAll('member')
      });
       // return this.get('store').findAll('blog');
   }
