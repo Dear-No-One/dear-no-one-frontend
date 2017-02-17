@@ -1,9 +1,10 @@
-{{#each model.members as |member|}}
-<h1>Welcome {{member.username}}</h1>
-{{/each}}
+<!-- {{#each model.member as |member|}} -->
+<!-- <h1>Welcome {{member.username}}</h1> -->
+<!-- {{/each}} -->
 <div class="layout-row flex dash-board-card blog-title-card">
   <div class="flex">
-    {{#each model.blogs as |blog|}}
+    <h1>{{blog.member.username}}</h1>
+    {{#each model as |blog|}}
       {{#paper-card as |card|}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
@@ -12,7 +13,7 @@
         {{/card.title}}
         {{#card.content}}
           <p>
-            {{blog.blogs.body}}
+            {{blog.body}}
           </p>
         {{/card.content}}
         {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
