@@ -1,3 +1,13 @@
+<!-- <h1>TEMPLATE-1.HBS START</h1>
+{{#each member as |member|}}
+    <h1>{{member.username}}</h1>
+
+    {{#each member.blogs as |blog|}}
+        <h3>{{blog.postTitle}}</h3>
+    {{/each}}
+
+{{/each}} -->
+
 <div class="default-theme-1">
 <div class="{{if isTrue "theme-choice-1"}}">
 
@@ -5,7 +15,7 @@
   <div class="flex template layout-column">
     <div class="flex flex-gt-xs-33">
       {{#paper-card class="blog-title-card" as |card|}}
-        <h1 id="blog-name">Blog Name</h1>
+        <h1 id="blog-name">Sam's Blog</h1>
       {{/paper-card}}
     </div>
   </div>
@@ -14,13 +24,16 @@
 
 
   {{#paper-switch value=isTrue onChange=(action (mut isTrue))}}
-    <!-- {{booleanProp1}} -->
+    <!-- {{isTrue}} -->
+    <span>Theme</span>
   {{/paper-switch}}
 </div>
 <div class="layout-row layout-xs-column blog-container md-padding blog-container">
   <div class=" flex flex-gt-xs-66 blog-content">
-      {{#each data as |blogPost|}}
-        {{blog-post-template-1 blog=blogPost}}
+
+      {{#each member as |member|}}
+      <!-- <h1>{{member.username}}</h1> -->
+        {{blog-post-template-1 member=member}}
       {{/each}}
 
   </div>
@@ -29,9 +42,10 @@
 
     {{#paper-card class="blog-container" as |card|}}
       {{card.image src="https://pbs.twimg.com/profile_images/874417950/003-2-square_400x400.jpg" alt="Washed Out" title="Washed Out"}}
+
       {{#card.title blog-container as |title|}}
         {{#title.text blog-container as |text|}}
-
+        {{#text.headline}}<h2>Sammy G</h2>{{/text.headline}}
         {{/title.text}}
       {{/card.title}}
       {{#card.content}}

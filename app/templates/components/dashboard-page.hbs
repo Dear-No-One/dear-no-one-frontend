@@ -3,33 +3,34 @@
 <!-- {{/each}} -->
 <div class="layout-row flex dash-board-card blog-title-card">
   <div class="flex">
-    {{#each model.member as |member|}}
-      <h1>Hello {{member.username}}!</h1>
-      <h2>Go fuck yourself {{member.id}} times.</h2>
-      <h3>{{member.blogs}}</h3>
+    {{#each model.logged as |logged|}}
+      <h2>Hello {{logged.username}}! Life is hard, but I Love You 💋</h2>
     {{/each}}
 
-    {{#each model.blogs as |blog|}}
-      {{#paper-card as |card|}}
-        {{#card.title as |title|}}
-          {{#title.text as |text|}}
-            {{#text.headline}}{{blog.title}}{{/text.headline}}
-          {{/title.text}}
-        {{/card.title}}
-        {{#card.content}}
-          <h1>{{blog.memberId}}</h1>
-          <p>
-            {{blog.body}}
-          </p>
-        {{/card.content}}
-        {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
-          {{#actions.icons}}
-            <img src="assets/facebook.png" alt="" class="social-icon">
-            <img src="assets/twitter.png" alt="" class="social-icon">
-            <img src="assets/instagram.png" alt="" class="social-icon">
-          {{/actions.icons}}
-        {{/card.actions}}
-      {{/paper-card}}
+    {{#each model.member as |member|}}
+      {{#each member.blogs as |blog|}}
+          {{#paper-card class="dashboard-card" as |card|}}
+            {{#card.title as |title|}}
+              {{#title.text as |text|}}
+                {{#link-to 'blog'}}{{#text.headline}}{{blog.postTitle}}{{/text.headline}}{{/link-to}}
+                {{#text.subhead}}Author: {{member.username}}{{/text.subhead}}
+              {{/title.text}}
+            <!-- {{title.media size="lg" src="https://pbs.twimg.com/profile_images/874417950/003-2-square_400x400.jpg" alt="Tomster" title="Tomster"}} -->
+            {{/card.title}}
+            {{#card.content}}
+              <p>
+                {{blog.postBody}}
+              </p>
+            {{/card.content}}
+            {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
+              {{#actions.icons}}
+                <img src="assets/facebook.png" alt="" class="social-icon">
+                <img src="assets/twitter.png" alt="" class="social-icon">
+                <img src="assets/instagram.png" alt="" class="social-icon">
+              {{/actions.icons}}
+            {{/card.actions}}
+          {{/paper-card}}
+      {{/each}}
     {{/each}}
 
   </div>

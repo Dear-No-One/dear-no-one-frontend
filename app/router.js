@@ -8,13 +8,14 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('form');
-  this.route('dashboard');
-  this.route('blogs');
-  this.route('newroute');
+  this.route('dashboard')
+  this.route('blog');
+  // this.route('blogs');
+  // this.route('newroute');
   this.route('home');
   this.route('login');
   this.route('user');
-  this.route('blog');
+
   this.route('new-blog-form');
   this.route('signup');
   this.route('blogPostTemplate');
