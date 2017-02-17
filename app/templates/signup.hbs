@@ -1,6 +1,13 @@
+
+
+
 {{#paper-form onSubmit=(action "submitSignUp") as |form|}}
+
+<div class="signup">
+  <h1>SIGN UP</h1>
+
   <div class="layout-row">
-    <div class="layout-column flex-50">
+    <div class="layout-column flex-90">
       {{form.input label="username" value=username onChange=(action (mut username)) required=true}}
       {{form.input label="email" value=email onChange=(action (mut email) required=true)}}
       {{form.input label="password" type="password" value=password onChange=(action (mut password) required=true)}}
@@ -13,8 +20,11 @@
       {{form.input label="twitter" value=twitter onChange=(action (mut twitter)) }}
       {{form.input label="instagram" value=instagram onChange=(action (mut instagram)) }}
     </div>
+
   </div>
-  <div class="layout-row">
-    {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
+
+  {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
+
+
   </div>
 {{/paper-form}}

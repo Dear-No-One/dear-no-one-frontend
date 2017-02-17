@@ -1,8 +1,20 @@
-<h2>Login page</h2>
+<div class="login">
+
+
+<h1>LOG IN</h1>
 <p>Use login / ok</p>
 
-<form {{action 'authenticate' on='submit'}}>
-  {{input value=email placeholder='Email'}}<br>
-  {{input value=password placeholder='Password' type='password'}}<br>
-  <button type="submit">Login</button>
-</form>
+
+
+
+<form class="f" {{action 'authenticate' on='submit'}}>
+<div class="layout layout-sm-column">
+   {{paper-input flex=30 label="E-mail" type="email" value=email onChange=(action (mut email))}}
+   {{paper-input flex=40 label="Password" type="password" value=password onChange=(action (mut password))}}
+
+ </div>
+  <button type="submit">Login</button>{{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
+ </form>
+
+
+ </div>

@@ -29,8 +29,8 @@ $dark-theme-accent1: #FBC800 !important;
 @mixin button-style {
   padding: .5em 2em;
   opacity: .8;
-  background-color: $def-accent1;
-  color: $def-primary;
+  // background-color: $def-accent1;
+  // color: $def-primary;
 }
 @mixin parallax ($url) {
     background-image:url($url);
@@ -42,11 +42,22 @@ $dark-theme-accent1: #FBC800 !important;
     display: flex;
     flex-direction: column;
 }
+.homepage{
+  p {
+      font-size: 1.25em;
+      line-height: 1.5;
+  }
 
-p {
-  font-size: 1.25em;
-  line-height: 1.5;
+
+
 }
+
+
+
+// p {
+//   font-size: 1.25em;
+//   line-height: 1.5;
+// }
 
 .paper-right {
   margin-left: auto;
@@ -61,10 +72,58 @@ p {
    height: 75vh;
    justify-content: center;
    align-items: center;
+   p{
+     color:white;
+     font-size:1.5em;
+     font-weight:bold;
+   }
+}
+.signup {
+  padding:5%;
+  > .layout-row {
+    /* border: solid; */
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+h1{
+  text-align:center;
+  font-size: 4em;
+margin: 0;
+color: #F54F29 !important;
+}
 }
 
+.login {
+    display:flex;
+    padding: 2%;
+    align-items:center;
+    flex-direction:column;
+h1{
+  font-size: 4em;
+  margin: 0;
+  color: $def-accent2;
+}
+.f{
+  display:flex;
+    flex-direction:column;
+  border-radius:5%;
+  padding:2%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+}
 .parallax-2 {
    @include parallax("https://static.pexels.com/photos/309166/pexels-photo-309166.jpeg");
+
+   h2{
+     color:white;
+   }
+   p{
+     color:white;
+     font-size:1em;
+   }
 }
 
 .template {
@@ -77,11 +136,16 @@ p {
 .blog-title-card {
   padding: 1em 7em;
 }
+
 .hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.32);
+  height: 100%;
+  width: 100%;
+  border-radius: 13px;
 
   h1 {
     font-size: 5em;
@@ -105,6 +169,7 @@ p {
     text-align: center;
 
     .card-icon {
+      color:white;
         display: flex;
         justify-content: center;
     }
@@ -112,7 +177,7 @@ p {
 
 
 .parallax-2-text, .parallax-3-text   {
- padding: 1.5em 5em;
+ padding: 8em 7em;
  background: #f54f29;
  display: flex;
  flex-direction: column;
