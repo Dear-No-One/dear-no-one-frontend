@@ -1,7 +1,14 @@
-# nav-splash
+# Client
+## Dear No One 
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This project is live at ().
+
+Dear No One is a web app that was created to be a blogging platform. The design is to enable users with no tech know how to create and maintain a blog free of charge. The app offers a clean UI/UX expierence for bloggers to quickly create there very own blog. With multiple templete and color themes to choose from the blogger can design a more personal feel to thier page. 
+
+As a none logged in user, one browse and view blogs based categories. But as a registeraed user, one and create thier own blog post from anywhere in the site. 
+
+Dear No One is built on ember.js framework and uses ember-data, ember-paper, and ember-simple-oauth. The server is built in Node.js using Express, Knex.js, and Postgres. 
+
 
 ## Prerequisites
 
@@ -25,28 +32,3 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
