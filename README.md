@@ -22,10 +22,11 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd nav-splash`
+* `git clone <https://github.com/Dear-No-One/dear-no-one-frontend>` this repository
+* `cd dear-no-one-frontend`
 * `npm install`
 * `bower install`
+* `$ember s`
 
 ## Running / Development
 
